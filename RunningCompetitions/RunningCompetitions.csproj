@@ -1,0 +1,298 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{CA59D973-8BDC-49D7-AB61-BB60579FEBDC}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>RunningCompetitions</RootNamespace>
+    <AssemblyName>RunningCompetitions</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <ProjectTypeGuids>{60dc8134-eba5-43b8-bcc9-bb4bc16c2548};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <WarningLevel>4</WarningLevel>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.Xml" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xaml">
+      <RequiredTargetFramework>4.0</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="WindowsBase" />
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
+  </ItemGroup>
+  <ItemGroup>
+    <ApplicationDefinition Include="App.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </ApplicationDefinition>
+    <Compile Include="ado\bd_connection.cs" />
+    <Compile Include="ado\City.cs">
+      <DependentUpon>Competitions.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ado\Command.cs">
+      <DependentUpon>Competitions.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ado\Competition.cs">
+      <DependentUpon>Competitions.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ado\Competitions.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Competitions.tt</DependentUpon>
+    </Compile>
+    <Compile Include="page_admin.xaml.cs">
+      <DependentUpon>page_admin.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="page_admin_compet.xaml.cs">
+      <DependentUpon>page_admin_compet.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="page_command.xaml.cs">
+      <DependentUpon>page_command.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="page_competition.xaml.cs">
+      <DependentUpon>page_competition.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="page_login.xaml.cs">
+      <DependentUpon>page_login.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="page_main_show.xaml.cs">
+      <DependentUpon>page_main_show.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="page_registr.xaml.cs">
+      <DependentUpon>page_registr.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ado\Result_competition.cs">
+      <DependentUpon>Competitions.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ado\Sponsor.cs">
+      <DependentUpon>Competitions.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ado\Sponsor_command.cs">
+      <DependentUpon>Competitions.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ado\Sportsman.cs">
+      <DependentUpon>Competitions.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ado\sysdiagrams.cs">
+      <DependentUpon>Competitions.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ado\Title.cs">
+      <DependentUpon>Competitions.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ado\Type_running.cs">
+      <DependentUpon>Competitions.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ado\user.cs">
+      <DependentUpon>Competitions.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ado\Venue.cs">
+      <DependentUpon>Competitions.tt</DependentUpon>
+    </Compile>
+    <Compile Include="page_sponsor.xaml.cs">
+      <DependentUpon>page_sponsor.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="WinInfoSportsman.xaml.cs">
+      <DependentUpon>WinInfoSportsman.xaml</DependentUpon>
+    </Compile>
+    <Page Include="MainWindow.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Compile Include="App.xaml.cs">
+      <DependentUpon>App.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="ado\Competitions.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Competitions.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ado\Competitions.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Competitions.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="MainWindow.xaml.cs">
+      <DependentUpon>MainWindow.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Page Include="page_admin.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="page_admin_compet.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="page_command.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="page_competition.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="page_login.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="page_main.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="page_main_show.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="page_registr.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="page_sponsor.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="page_sportsman.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="WinInfoSportsman.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="page_main.xaml.cs">
+      <DependentUpon>page_main.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="page_sportsman.xaml.cs">
+      <DependentUpon>page_sportsman.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EntityDeploy Include="ado\Competitions.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>Competitions.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <None Include="ado\Competitions.edmx.diagram">
+      <DependentUpon>Competitions.edmx</DependentUpon>
+    </None>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="ado\Competitions.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>Competitions.Context.cs</LastGenOutput>
+      <DependentUpon>Competitions.edmx</DependentUpon>
+    </Content>
+    <Content Include="ado\Competitions.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>Competitions.edmx</DependentUpon>
+      <LastGenOutput>Competitions.cs</LastGenOutput>
+    </Content>
+    <Resource Include="img\command\command4.jpg" />
+    <Resource Include="img\command\command13.jpg" />
+    <Resource Include="img\command\command10.jpg" />
+    <Resource Include="img\command\command11.jpg" />
+    <Resource Include="img\command\command9.jpg" />
+    <Resource Include="img\command\command1.jpg" />
+    <Resource Include="img\command\command2.jpg" />
+    <Resource Include="img\command\command3.jpg" />
+    <Resource Include="img\command\command5.jpg" />
+    <Resource Include="img\command\command6.jpg" />
+    <Resource Include="img\command\command7.jpg" />
+    <Resource Include="img\command\command8.jpg" />
+    <Resource Include="img\command\command34.jpg" />
+    <Resource Include="img\sport22.jpeg" />
+    <Resource Include="img\sport15.jpg" />
+    <Resource Include="img\sport19.jpg" />
+    <Resource Include="img\sport7.jpg" />
+    <Resource Include="img\sport11.jpg" />
+    <Resource Include="img\sport12.jpg" />
+    <Resource Include="img\sport14.jpg" />
+    <Resource Include="img\sport16.jpg" />
+    <Resource Include="img\sport17.jpg" />
+    <Resource Include="img\sport18.jpg" />
+    <Resource Include="img\sport20.jpg" />
+    <Resource Include="img\sport21.jpg" />
+    <Resource Include="img\sport10.jpg" />
+    <Resource Include="img\sport4.jpg" />
+    <Resource Include="img\sport5.jpg" />
+    <Resource Include="img\sport6.jpg" />
+    <Resource Include="img\sport8.jpg" />
+    <Resource Include="img\sport9.jpg" />
+    <Resource Include="img\sport3.jpg" />
+    <Resource Include="img\sport2.jpg" />
+    <Resource Include="img\sportsman1.jpg" />
+    <Resource Include="img\image 1.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="admin\" />
+    <Folder Include="sponsor\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
