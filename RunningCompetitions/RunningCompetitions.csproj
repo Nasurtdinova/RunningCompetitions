@@ -64,6 +64,9 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="ado\Bank_card.cs">
+      <DependentUpon>Competitions.tt</DependentUpon>
+    </Compile>
     <Compile Include="ado\bd_connection.cs" />
     <Compile Include="ado\City.cs">
       <DependentUpon>Competitions.tt</DependentUpon>
@@ -74,31 +77,20 @@
     <Compile Include="ado\Competition.cs">
       <DependentUpon>Competitions.tt</DependentUpon>
     </Compile>
+    <Compile Include="ado\Competitions.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Competitions.Context.tt</DependentUpon>
+    </Compile>
     <Compile Include="ado\Competitions.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>Competitions.tt</DependentUpon>
     </Compile>
-    <Compile Include="page_admin.xaml.cs">
-      <DependentUpon>page_admin.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="page_admin_compet.xaml.cs">
-      <DependentUpon>page_admin_compet.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="page_command.xaml.cs">
-      <DependentUpon>page_command.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="page_competition.xaml.cs">
-      <DependentUpon>page_competition.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="page_login.xaml.cs">
-      <DependentUpon>page_login.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="page_main_show.xaml.cs">
-      <DependentUpon>page_main_show.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="page_registr.xaml.cs">
-      <DependentUpon>page_registr.xaml</DependentUpon>
+    <Compile Include="ado\Competitions.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Competitions.edmx</DependentUpon>
     </Compile>
     <Compile Include="ado\Result_competition.cs">
       <DependentUpon>Competitions.tt</DependentUpon>
@@ -127,13 +119,76 @@
     <Compile Include="ado\Venue.cs">
       <DependentUpon>Competitions.tt</DependentUpon>
     </Compile>
-    <Compile Include="page_sponsor.xaml.cs">
+    <Compile Include="admin\page_admin.xaml.cs">
+      <DependentUpon>page_admin.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="admin\page_admin_commands.xaml.cs">
+      <DependentUpon>page_admin_commands.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="admin\page_admin_compet.xaml.cs">
+      <DependentUpon>page_admin_compet.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="admin\page_admin_create_command.xaml.cs">
+      <DependentUpon>page_admin_create_command.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="admin\page_admin_create_sportsman.xaml.cs">
+      <DependentUpon>page_admin_create_sportsman.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="admin\page_admin_redak_compet.xaml.cs">
+      <DependentUpon>page_admin_redak_compet.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="admin\page_admin_redak_sportsmans.xaml.cs">
+      <DependentUpon>page_admin_redak_sportsmans.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="admin\page_admin_result.xaml.cs">
+      <DependentUpon>page_admin_result.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="admin\page_admin_sportsmans.xaml.cs">
+      <DependentUpon>page_admin_sportsmans.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Viewer\page_command.xaml.cs">
+      <DependentUpon>page_command.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Viewer\page_competition.xaml.cs">
+      <DependentUpon>page_competition.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="admin\page_create_compet.xaml.cs">
+      <DependentUpon>page_create_compet.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="admin\page_create_result.xaml.cs">
+      <DependentUpon>page_create_result.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="registr_log_in\page_login.xaml.cs">
+      <DependentUpon>page_login.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Viewer\page_main_show.xaml.cs">
+      <DependentUpon>page_main_show.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="admin\page_redak_remove_admin_command.xaml.cs">
+      <DependentUpon>page_redak_remove_admin_command.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="admin\page_redak_result_admin.xaml.cs">
+      <DependentUpon>page_redak_result_admin.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="registr_log_in\page_registr.xaml.cs">
+      <DependentUpon>page_registr.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="sponsor\page_sponsor.xaml.cs">
       <DependentUpon>page_sponsor.xaml</DependentUpon>
     </Compile>
-    <Compile Include="WinInfoSportsman.xaml.cs">
+    <Compile Include="sponsor\page_sponsor_card.xaml.cs">
+      <DependentUpon>page_sponsor_card.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="sponsor\page_sponsor_sponsorstvo.xaml.cs">
+      <DependentUpon>page_sponsor_sponsorstvo.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="sponsor\page_Subsponsors.xaml.cs">
+      <DependentUpon>page_Subsponsors.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Viewer\WinInfoSportsman.xaml.cs">
       <DependentUpon>WinInfoSportsman.xaml</DependentUpon>
     </Compile>
-    <Page Include="MainWindow.xaml">
+    <Page Include="admin\MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
@@ -141,70 +196,116 @@
       <DependentUpon>App.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="ado\Competitions.Context.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>Competitions.Context.tt</DependentUpon>
-    </Compile>
-    <Compile Include="ado\Competitions.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>Competitions.edmx</DependentUpon>
-    </Compile>
-    <Compile Include="MainWindow.xaml.cs">
+    <Compile Include="admin\MainWindow.xaml.cs">
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
-    <Page Include="page_admin.xaml">
+    <Page Include="admin\page_admin.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="page_admin_compet.xaml">
+    <Page Include="admin\page_admin_commands.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="page_command.xaml">
+    <Page Include="admin\page_admin_compet.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="page_competition.xaml">
+    <Page Include="admin\page_admin_create_command.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="page_login.xaml">
+    <Page Include="admin\page_admin_create_sportsman.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="page_main.xaml">
+    <Page Include="admin\page_admin_redak_compet.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="page_main_show.xaml">
+    <Page Include="admin\page_admin_redak_sportsmans.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="page_registr.xaml">
+    <Page Include="admin\page_admin_result.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="page_sponsor.xaml">
+    <Page Include="admin\page_admin_sportsmans.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="page_sportsman.xaml">
+    <Page Include="Viewer\page_command.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="WinInfoSportsman.xaml">
+    <Page Include="Viewer\page_competition.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="admin\page_create_compet.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="admin\page_create_result.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="registr_log_in\page_login.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Viewer\page_main.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Viewer\page_main_show.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="admin\page_redak_remove_admin_command.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="admin\page_redak_result_admin.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="registr_log_in\page_registr.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="sponsor\page_sponsor.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="sponsor\page_sponsor_card.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="sponsor\page_sponsor_sponsorstvo.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Viewer\page_sportsman.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="sponsor\page_Subsponsors.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Viewer\WinInfoSportsman.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="page_main.xaml.cs">
+    <Compile Include="Viewer\page_main.xaml.cs">
       <DependentUpon>page_main.xaml</DependentUpon>
     </Compile>
-    <Compile Include="page_sportsman.xaml.cs">
+    <Compile Include="Viewer\page_sportsman.xaml.cs">
       <DependentUpon>page_sportsman.xaml</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs">
@@ -241,16 +342,6 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="ado\Competitions.Context.tt">
-      <Generator>TextTemplatingFileGenerator</Generator>
-      <LastGenOutput>Competitions.Context.cs</LastGenOutput>
-      <DependentUpon>Competitions.edmx</DependentUpon>
-    </Content>
-    <Content Include="ado\Competitions.tt">
-      <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>Competitions.edmx</DependentUpon>
-      <LastGenOutput>Competitions.cs</LastGenOutput>
-    </Content>
     <Resource Include="img\command\command4.jpg" />
     <Resource Include="img\command\command13.jpg" />
     <Resource Include="img\command\command10.jpg" />
@@ -290,9 +381,21 @@
   <ItemGroup>
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
   </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
-    <Folder Include="admin\" />
-    <Folder Include="sponsor\" />
+    <Content Include="ado\Competitions.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>Competitions.edmx</DependentUpon>
+      <LastGenOutput>Competitions.Context.cs</LastGenOutput>
+    </Content>
+    <Content Include="ado\Competitions.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>Competitions.edmx</DependentUpon>
+      <LastGenOutput>Competitions.cs</LastGenOutput>
+    </Content>
+    <Resource Include="img\main_menu.png" />
+    <Resource Include="img\menu1.png" />
+    <Resource Include="img\menu.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

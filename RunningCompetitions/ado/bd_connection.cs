@@ -8,6 +8,6 @@ namespace RunningCompetitions
 {
     class bd_connection
     {
-        public static ado.CompetitionEntities connection = new ado.CompetitionEntities();
+        public static ado.CompetitionEntities1 connection = new ado.CompetitionEntities1();
     }
 }

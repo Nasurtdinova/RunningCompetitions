@@ -13,10 +13,10 @@ namespace RunningCompetitions.ado
     using System.Data.Entity;
     using System.Data.Entity.Infrastructure;
     
-    public partial class CompetitionEntities : DbContext
+    public partial class CompetitionEntities1 : DbContext
     {
-        public CompetitionEntities()
-            : base("name=CompetitionEntities")
+        public CompetitionEntities1()
+            : base("name=CompetitionEntities1")
         {
         }
     
@@ -25,17 +25,18 @@ namespace RunningCompetitions.ado
             throw new UnintentionalCodeFirstException();
         }
     
+        public virtual DbSet<Sportsman> Sportsman { get; set; }
+        public virtual DbSet<sysdiagrams> sysdiagrams { get; set; }
         public virtual DbSet<City> City { get; set; }
         public virtual DbSet<Command> Command { get; set; }
         public virtual DbSet<Competition> Competition { get; set; }
         public virtual DbSet<Result_competition> Result_competition { get; set; }
         public virtual DbSet<Sponsor> Sponsor { get; set; }
         public virtual DbSet<Sponsor_command> Sponsor_command { get; set; }
-        public virtual DbSet<Sportsman> Sportsman { get; set; }
-        public virtual DbSet<sysdiagrams> sysdiagrams { get; set; }
         public virtual DbSet<Title> Title { get; set; }
         public virtual DbSet<Type_running> Type_running { get; set; }
         public virtual DbSet<user> user { get; set; }
         public virtual DbSet<Venue> Venue { get; set; }
+        public virtual DbSet<Bank_card> Bank_card { get; set; }
     }
 }

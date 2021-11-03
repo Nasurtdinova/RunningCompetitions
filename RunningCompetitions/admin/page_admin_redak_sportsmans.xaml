@@ -1,0 +1,65 @@
+﻿<Page x:Class="RunningCompetitions.page_admin_redak_sportsmans"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:RunningCompetitions"
+      mc:Ignorable="d" 
+      d:DesignHeight="450" d:DesignWidth="800"
+      Title="page_admin_redak_sportsmans">
+
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition></ColumnDefinition>
+            <ColumnDefinition></ColumnDefinition>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+
+            <RowDefinition Height="40">
+            </RowDefinition>
+            <RowDefinition Height="35">
+            </RowDefinition>
+            <RowDefinition Height="35">
+            </RowDefinition>
+            <RowDefinition Height="35">
+            </RowDefinition>
+            <RowDefinition Height="35">
+            </RowDefinition>
+            <RowDefinition Height="35">
+            </RowDefinition>
+            <RowDefinition Height="35">
+            </RowDefinition>
+            <RowDefinition Height="35">
+            </RowDefinition>
+            <RowDefinition Height="35">
+            </RowDefinition>
+            <RowDefinition Height="35">
+            </RowDefinition>
+            <RowDefinition Height="35">
+            </RowDefinition>
+        </Grid.RowDefinitions>
+        <TextBlock Text="Sportsmans" FontSize="30" HorizontalAlignment="Center"  VerticalAlignment="Center" Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="2"></TextBlock>
+        <TextBlock Text="Surname" FontSize="30" Grid.Row="2" HorizontalAlignment="Center" VerticalAlignment="Center"></TextBlock>
+        <TextBlock Text="Name" FontSize="30" Grid.Row="3" HorizontalAlignment="Center" VerticalAlignment="Center"></TextBlock>
+        <TextBlock Text="Year birth" FontSize="30" Grid.Row="4" HorizontalAlignment="Center" VerticalAlignment="Center"></TextBlock>
+        <TextBlock Text="Cost" FontSize="30" Grid.Row="5" HorizontalAlignment="Center" VerticalAlignment="Center"></TextBlock>
+        <TextBlock Text="Height" FontSize="30" Grid.Row="6" HorizontalAlignment="Center" VerticalAlignment="Center"></TextBlock>
+        <TextBlock Text="ID title" FontSize="30" Grid.Row="7" HorizontalAlignment="Center" VerticalAlignment="Center"></TextBlock>
+        <TextBlock Text="ID command" FontSize="30" Grid.Row="8" HorizontalAlignment="Center" VerticalAlignment="Center"></TextBlock>
+        <TextBlock Text="Image" FontSize="30" Grid.Row="9" HorizontalAlignment="Center" VerticalAlignment="Center"></TextBlock>
+        <TextBox x:Name="Surame_txt" Grid.Row="2" Grid.Column="1" Width="300" Height="30"></TextBox>
+        <TextBox x:Name="Name_txt" Grid.Row="3" Grid.Column="1" Width="300" Height="30"></TextBox>
+        <TextBox x:Name="YearBirth_txt" Grid.Row="4" Grid.Column="1" Width="300" Height="30"></TextBox>
+        <TextBox x:Name="Cost_txt" Grid.Row="5" Grid.Column="1" Width="300" Height="30"></TextBox>
+        <TextBox x:Name="Height_txt" Grid.Row="6" Grid.Column="1" Width="300" Height="30"></TextBox>
+        <TextBox x:Name="IDtitle_txt" Grid.Row="7" Grid.Column="1" Width="300" Height="30"></TextBox>
+        <TextBox x:Name="IDcommand_txt" Grid.Row="8" Grid.Column="1" Width="300" Height="30"></TextBox>
+        <TextBox x:Name="Image_txt" Grid.Row="9" Grid.Column="1" Width="300" Height="30"></TextBox>
+        <StackPanel Grid.Row="10" Orientation="Horizontal" Grid.Column="0" Grid.ColumnSpan="2" HorizontalAlignment="Center" VerticalAlignment="Center" Height="86" Margin="160,0,150,-50">
+            <Button x:Name="btn_Back" FontSize="25" Content="Back" Margin="10" Click="btn_Back_Click" Width="150" Height="40"/>
+            <Button x:Name="btn_Edit" FontSize="25" Content="Edit" Click="btn_Edit_Click" Width="150" Height="40"></Button>
+            <Button x:Name="btn_Remove" FontSize="25" Content="Remove" Margin="10" Click="btn_Remove_Click" Width="150" Height="40"/>
+        </StackPanel>
+
+    </Grid>
+</Page>

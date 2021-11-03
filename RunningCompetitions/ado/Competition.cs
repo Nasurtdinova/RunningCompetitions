@@ -26,9 +26,9 @@ namespace RunningCompetitions.ado
         public Nullable<int> ID_venue { get; set; }
         public Nullable<int> ID_type_running { get; set; }
     
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<Result_competition> Result_competition { get; set; }
         public virtual Type_running Type_running { get; set; }
         public virtual Venue Venue { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<Result_competition> Result_competition { get; set; }
     }
 }

@@ -12,22 +12,20 @@ namespace RunningCompetitions.ado
     using System;
     using System.Collections.Generic;
     
-    public partial class Sponsor
+    public partial class Bank_card
     {
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
-        public Sponsor()
+        public Bank_card()
         {
-            this.Sponsor_command = new HashSet<Sponsor_command>();
+            this.Sponsor = new HashSet<Sponsor>();
         }
     
-        public int ID_sponsor { get; set; }
-        public string Name { get; set; }
-        public string E_mail { get; set; }
-        public string Password { get; set; }
-        public Nullable<int> ID_card { get; set; }
+        public int ID_card { get; set; }
+        public string Last_and_first_name_holder { get; set; }
+        public string Validity_period { get; set; }
+        public Nullable<int> CVV2 { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<Sponsor_command> Sponsor_command { get; set; }
-        public virtual Bank_card Bank_card { get; set; }
+        public virtual ICollection<Sponsor> Sponsor { get; set; }
     }
 }

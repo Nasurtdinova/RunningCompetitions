@@ -14,6 +14,7 @@ namespace RunningCompetitions.ado
     
     public partial class Sponsor_command
     {
+        public int ID_sponsor_command { get; set; }
         public int ID_sponsor { get; set; }
         public int ID_command { get; set; }
         public Nullable<int> Team_of_the_contract { get; set; }
