@@ -54,7 +54,7 @@
                         <Image Source="{Binding image}" Width="200" HorizontalAlignment="Center" VerticalAlignment="Center" Height="150"/>
                         <TextBlock Text="{Binding Surname}" FontFamily="Lucida Calligraphy" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="22"/>
                         <TextBlock Text="{Binding Name}" FontFamily="Lucida Calligraphy" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="22"/>
-                        <TextBlock Text="{Binding Year_birth}" FontSize="22" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+             
                     
                     </StackPanel>
                 </DataTemplate>

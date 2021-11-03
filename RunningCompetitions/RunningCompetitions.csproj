@@ -146,6 +146,10 @@
     <Compile Include="admin\page_admin_sportsmans.xaml.cs">
       <DependentUpon>page_admin_sportsmans.xaml</DependentUpon>
     </Compile>
+    <Compile Include="page_redak.xaml.cs">
+      <DependentUpon>page_redak.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="SponsorCommand.cs" />
     <Compile Include="Viewer\page_command.xaml.cs">
       <DependentUpon>page_command.xaml</DependentUpon>
     </Compile>
@@ -233,6 +237,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="admin\page_admin_sportsmans.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="page_redak.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

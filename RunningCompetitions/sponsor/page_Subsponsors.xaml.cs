@@ -24,12 +24,11 @@ namespace RunningCompetitions
         public static ObservableCollection<ado.Sponsor_command> sponCom { get; set; }
         public static ObservableCollection<ado.Sponsor> sponsor { get; set; }
         public static ObservableCollection<ado.Command> command { get; set; }
-
+        public static SponsorCommand path;
         public static IEnumerable<SponsorCommand> result { get; set; }
         public page_Subsponsors(int id, string name)
         {
             InitializeComponent();
-            tb_Name.Text = name;
             sponCom = new ObservableCollection<ado.Sponsor_command>(bd_connection.connection.Sponsor_command.ToList());
             sponsor = new ObservableCollection<ado.Sponsor>(bd_connection.connection.Sponsor.ToList());
             command = new ObservableCollection<ado.Command>(bd_connection.connection.Command.ToList());
@@ -41,16 +40,15 @@ namespace RunningCompetitions
             this.DataContext = this;
         }
 
-        public class SponsorCommand
-        {
-            public string NameCommand { get; set; }
-            public int amount { get; set; }
-            public int contract { get; set; }
-        }
-
         private void btn_Back_Click(object sender, RoutedEventArgs e)
         {
             NavigationService.GoBack();
+        }
+
+        private void ListView_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            path = (sender as ListView).SelectedItem as SponsorCommand;
+            NavigationService.Navigate(new page_redak());
         }
     }
 }

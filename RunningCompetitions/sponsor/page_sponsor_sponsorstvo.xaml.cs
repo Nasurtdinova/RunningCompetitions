@@ -61,5 +61,10 @@ namespace RunningCompetitions
         {
             public int IDSponsor { get; set; }
         }
+
+        private void btn_Back_Click(object sender, RoutedEventArgs e)
+        {
+            NavigationService.GoBack();
+        }
     }
 }

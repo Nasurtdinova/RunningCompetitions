@@ -7,10 +7,23 @@
       mc:Ignorable="d" 
       d:DesignHeight="450" d:DesignWidth="800"
       Title="page_sponsor_card">
-
+    <Page.Resources>
+        <Style TargetType="Button">
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="Button">
+                        <Border CornerRadius="10" Background="#FFA0D0F1" Padding="10">
+                            <ContentPresenter HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}"
+                            VerticalAlignment="{TemplateBinding VerticalContentAlignment}"/>
+                        </Border>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+    </Page.Resources>
     <Grid>
         <Grid.ColumnDefinitions>
-            <ColumnDefinition>
+            <ColumnDefinition Width="450">
             </ColumnDefinition>
             <ColumnDefinition>
             </ColumnDefinition>
@@ -31,13 +44,13 @@
         </Grid.RowDefinitions>
         <TextBlock Text="Bank card" FontFamily="Lucida Calligraphy" FontWeight="Bold" FontSize="35" Grid.ColumnSpan="2" HorizontalAlignment="Center" VerticalAlignment="Center"></TextBlock>
         <TextBlock Text="Number card" Grid.Column="0"  FontFamily="Lucida Calligraphy" FontWeight="Bold" Grid.Row="1" FontSize="35" HorizontalAlignment="Center" VerticalAlignment="Center"></TextBlock>
-        <TextBlock Text="Last and first name holder"  FontFamily="Lucida Calligraphy" FontWeight="Bold" Grid.Column="0" Grid.Row="2" FontSize="35" HorizontalAlignment="Center" VerticalAlignment="Center"></TextBlock>
+        <TextBlock Text="Last, first name holder"  FontFamily="Lucida Calligraphy" FontWeight="Bold" Grid.Column="0" Grid.Row="2" FontSize="35" HorizontalAlignment="Center" VerticalAlignment="Center"></TextBlock>
         <TextBlock Text="CVV2" FontFamily="Lucida Calligraphy" FontWeight="Bold" Grid.Column="0" Grid.Row="3" FontSize="35" HorizontalAlignment="Center" VerticalAlignment="Center"></TextBlock>
-        <TextBox Grid.Column="1" Grid.Row="1" Name="number_txt"></TextBox>
-        <TextBox Grid.Column="1" Grid.Row="2" Name="firstLastname_txt"></TextBox>
+        <TextBox Grid.Column="1" FontFamily="Lucida Calligraphy" FontSize="25" Width="300" Height="50" Grid.Row="1" Name="number_txt"></TextBox>
+        <TextBox Grid.Column="1" FontFamily="Lucida Calligraphy" FontSize="25" Width="300" Height="50" Grid.Row="2" Name="firstLastname_txt"></TextBox>
         <TextBlock Text="Validaty period"  FontFamily="Lucida Calligraphy" FontWeight="Bold" Grid.Column="0" Grid.Row="4" FontSize="35" HorizontalAlignment="Center" VerticalAlignment="Center"></TextBlock>
-        <TextBox Grid.Column="1" Grid.Row="3" Name="cvv2_txt"></TextBox>
-        <TextBox Grid.Column="1" Grid.Row="4" Name="period_txt"></TextBox>
-        <Button Grid.Column="0" Grid.Row="5" Grid.ColumnSpan="2" Width="200" Height="50" Content="OK" Click="Button_Click"></Button>
+        <TextBox Grid.Column="1" FontFamily="Lucida Calligraphy" FontSize="25" Width="300" Height="50" Grid.Row="3" Name="cvv2_txt"></TextBox>
+        <TextBox Grid.Column="1" FontFamily="Lucida Calligraphy" FontSize="25"  Width="300" Height="50" Grid.Row="4" Name="period_txt"></TextBox>
+        <Button Grid.Column="0" FontSize="18" FontFamily="Lucida Calligraphy" Grid.Row="5" Grid.ColumnSpan="2" Width="200" Height="50" Content="OK" Click="Button_Click"></Button>
     </Grid>
 </Page>

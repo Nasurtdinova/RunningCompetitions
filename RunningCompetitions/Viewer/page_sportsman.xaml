@@ -54,7 +54,7 @@
                         <Image Source="{Binding image}" HorizontalAlignment="Center" VerticalAlignment="Center" Width="200" Height="150"/>
                         <TextBlock Text="{Binding Surname}" FontFamily="Lucida Calligraphy" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="22"/>
                         <TextBlock Text="{Binding Name}" FontFamily="Lucida Calligraphy" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="22"/>
-                        <TextBlock Text="{Binding CommandSportsman.NameCommand}" FontFamily="Lucida Calligraphy" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="22"/>
+                       
                     </StackPanel>
                 </DataTemplate>
             </ListView.ItemTemplate>

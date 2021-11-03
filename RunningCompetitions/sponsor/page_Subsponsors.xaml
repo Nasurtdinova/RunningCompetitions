@@ -7,7 +7,20 @@
       mc:Ignorable="d" 
       d:DesignHeight="450" d:DesignWidth="800"
       Title="page_Subsponsors">
-
+    <Page.Resources>
+        <Style TargetType="Button">
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="Button">
+                        <Border CornerRadius="10" Background="#FFA0D0F1" Padding="10">
+                            <ContentPresenter HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}"
+                            VerticalAlignment="{TemplateBinding VerticalContentAlignment}"/>
+                        </Border>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+    </Page.Resources>
     <Grid>
         <Grid.ColumnDefinitions>
             <ColumnDefinition></ColumnDefinition>
@@ -17,15 +30,21 @@
             </RowDefinition>
             <RowDefinition>
             </RowDefinition>
-            <RowDefinition Height="70">
+            <RowDefinition Height="50">
             </RowDefinition>
         </Grid.RowDefinitions>
-        <TextBlock x:Name="tb_Name" FontSize="30" Grid.Row="0" RenderTransformOrigin="-1.74,0.667" Margin="88,0,548,0"/>
-        <TextBlock Text="Subsponsors" FontSize="36" VerticalAlignment="Center" HorizontalAlignment="Center" Margin="287,0,284,12" Width="229"></TextBlock>
-        <DataGrid x:Name="compet_info" Height="350" AutoGenerateColumns="True" ItemsSource="{Binding result}" Grid.Row="1" Width="700">
-            <DataGrid.Columns>
-            </DataGrid.Columns>
-        </DataGrid>
-        <Button x:Name="btn_Back" Content="Back" Click="btn_Back_Click" Grid.Row="2" Height="50" Width="100"></Button>
+        <TextBlock Text="My subsponsors" FontFamily="Lucida Calligraphy" FontWeight="Bold" FontSize="35" VerticalAlignment="Center" HorizontalAlignment="Center" Width="350"></TextBlock>
+        <ListView Grid.Row="1" ItemsSource="{Binding result}" SelectionChanged="ListView_SelectionChanged" Height="350">
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <StackPanel Orientation="Horizontal">
+                        <TextBlock Text="{Binding NameCommand}" FontFamily="Lucida Calligraphy" FontSize="22" Padding="10" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                        <TextBlock Text="{Binding amount}" FontFamily="Lucida Calligraphy" FontSize="22" Padding="10" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                        <TextBlock Text="{Binding contract}" FontFamily="Lucida Calligraphy" FontSize="22" Padding="10" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                    </StackPanel>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+        <Button x:Name="btn_Back" FontSize="18" FontFamily="Lucida Calligraphy" Content="Back" Click="btn_Back_Click" Grid.Row="2" Height="40" Width="100"></Button>
     </Grid>
 </Page>
